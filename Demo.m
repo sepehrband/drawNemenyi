@@ -12,13 +12,13 @@
 % Then, we define our output folder and output name and run the code.
 
 % Here is an example, assuming you are comparing 4 techniques:
-
+results = [1 2 3 4;1 3 2 4;2 2 3 4;1 3 3 4;1 2 2 3; 1 4 2 4];
 Names = {'tech #1','tech #2','tech #3','tech #4'}; % names
-OutputFolder  = '~/Address/to/output';             % Output folder
+OutputFolder  = '~/Desktop';                       % Output folder
 Outname = 'NemenyiResults';                        % Output name
-Draw_Nemenyi(results, Names, OutputFolder, Outname);
+drawNemenyi(results, Names, OutputFolder, Outname);
 
-% Now you should see a "NemeyiResults.tif" on the output folder.
-% You can change the print options (see %%print section of Draw_Nemenyi.m)
+% Now you should see a "NemeyiResults.tif" on yoru Desktop folder.
+% You can change the print options (see %%print section of drawNemenyi.m)
 % Enjoy!
 
