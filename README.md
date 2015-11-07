@@ -15,5 +15,5 @@ See the instruction of Demo.m file for more info.
 ###Here are the detailed info of each component:
 
 *-------------------------------------------------------------------------------------------------------------------*
-![alt tag](https://raw.github.com/sepehrband/drawNemenyi/master/NemenyiResults_2.tif)
+![alt tag](https://raw.github.com/sepehrband/drawNemenyi/master/NemenyiResults_3.tif)
 *-------------------------------------------------------------------------------------------------------------------*
