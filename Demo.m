@@ -2,10 +2,10 @@
 % Farshid Sepehrband - Jeiran Choupan
 % nemenyi.m function is borrowed from: http://kourentzes.com/forecasting/2013/04/19/nemenyi-test/
 
-% Let's say we have a matrix of MxN, as the Nemenyi's input:
+% Let's say we have a matrix of MxN, as the input:
 % M measurements x N techniques
 
-% First we define a cell of strings, including name of technique. 
+% First we define a cell of strings, including names of techniques. 
 % for example: 
 % Names = {'tech #1','tech #2',...,'tech #n'};
 
