@@ -1,10 +1,10 @@
-function Draw_Nemenyi(ST,Base_L,OutFolder,OutName)
+function drawNemenyi(Results,Names,OutFolder,OutName)
 
-close all;hold off;
-cd = fsCD(ST);
-Ne = size(ST,2);
-for i = 1:size(ST,1)
-    Ran(i,:) = tiedrank(ST(i,:));
+figure(1)
+cd = fsCD(Results);
+Ne = size(Results,2);
+for i = 1:size(Results,1)
+    Ran(i,:) = tiedrank(Results(i,:));
 end
 plot([1 Ne],[0 0],'k')
 hold on
@@ -24,7 +24,7 @@ for i = 1:divInd
     
     plot([RanSort(i) RanSort(i)],[-0.01 -0.01-(i*LinSpa)],'r')
     plot([1 RanSort(i)],[-0.01-(i*LinSpa) -0.01-(i*LinSpa)],'r')
-    text(0.9,-0.01-(i*LinSpa),char(Base_L(RanIndx(i))),'HorizontalAlignment','right')
+    text(0.9,-0.01-(i*LinSpa),char(Names(RanIndx(i))),'HorizontalAlignment','right')
 end
 
 i = 1;
@@ -32,7 +32,7 @@ for c = length(RanSort):-1:divInd+1
     
     plot([RanSort(c) RanSort(c)],[-0.01 -0.01-(i*LinSpa)],'r')
     plot([RanSort(c) Ne],[-0.01-(i*LinSpa) -0.01-(i*LinSpa)],'r')
-    text(Ne+.1,-0.01-(i*LinSpa),char(Base_L(RanIndx(c))))
+    text(Ne+.1,-0.01-(i*LinSpa),char(Names(RanIndx(c))))
     i = i+1;
 end
 for i = 1:length(RanSort)
@@ -45,7 +45,7 @@ plot([1 1+cd],[0.05 0.05],'Color',h.Color);
 text(1, 0.05+0.02, 'CD','Color',h.Color)
 
 %% Draw significant lines
-Temp = ST(:,RanIndx);
+Temp = Results(:,RanIndx);
 [p, Nemenyi, meanrank, CDa, rankmean] = nemenyi(Temp, 1);
 if p<0.05
     NEM = tril(Nemenyi==1);
@@ -82,3 +82,4 @@ set(gca,'LineWidth',0.75,'FontSize',8,'FontName','Arial');
 set(gcf, 'PaperUnits', 'centimeters');
 set(gcf, 'PaperPosition', [0 0 12 8]);
 print('-dtiff' ,'-r600',[OutFolder '/' OutName '.tif'])
+% close(1)
