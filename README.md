@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/45722511.svg)](https://zenodo.org/badge/latestdoi/45722511)
+
 ## drawNemenyi
 drawNemenyi is a MATLAB function which plot results of Nemenyi's post-hoc test for the Friedman test in a camera ready quality.
 
